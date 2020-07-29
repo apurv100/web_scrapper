@@ -40,15 +40,15 @@ def result():
         for quote in quotes:
             try:
                 Quote = quote.div.div.div.a.text
-                # print(Quote)
+                
 
                 try:
                     Writer = quote.div.div.div.div.a.text
-                    # print(Writer)
+                    
                 except:
                     Writer = None
 
-                # print()
+                
 
                 myDict = {'Quote': Quote, 'Writer': Writer}
                 list_of_quotes.append(myDict)
@@ -64,9 +64,9 @@ def result():
         return render_template('home.html')
 
 
-# port = int(os.getenv("PORT"))
+
 if __name__ == '__main__':
     app.run(debug=True)
-    # app.run(host='0.0.0.0', port=port)
+    
 
     
